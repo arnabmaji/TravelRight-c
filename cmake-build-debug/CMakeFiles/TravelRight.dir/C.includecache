@@ -6,23 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/DestinationSelection.h
-Destinations.h
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Destinations.h
-stdlib.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/LocalTravel.h
+stdio.h
 -
 TravelData.h
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelData.h
-stdio.h
--
-
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Destinations.h
 
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelData.h
 
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c
 stdio.h
 -
-DestinationSelection.h
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/DestinationSelection.h
+LocalTravel.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/LocalTravel.h
 

@@ -179,5 +179,158 @@ static Destination INTERNATIONAL_DESTINATIONS[7] = {
 };
 
 static Destination NATIONAL_DESTINATIONS[7] = {
+        {
+                "Assam",
+                1,
+                {
+                        {
+                                "Vistara",
+                                "Economy",
+                                6292L
+                        },
+                        {
+                                "Air India",
+                                "Premium Economy",
+                                7242L
+                        },
+                        {
+                                "Jet Airways",
+                                "Business Class",
+                                34300L
 
+                        }
+                }
+        },
+        {
+                "Kolkata",
+                2,
+                {
+                        {
+                                "Vistara",
+                                "Economy",
+                                6292L
+                        },
+                        {
+                                "Air India",
+                                "Premium Economy",
+                                8547L
+                        },
+                        {
+                                "Jet Airways",
+                                "Business Class",
+                                40285L
+
+                        }
+                }
+        },
+        {
+                "Mumbai",
+                3,
+                {
+                        {
+                                "Vistara",
+                                "Economy",
+                                4939L
+                        },
+                        {
+                                "Air India",
+                                "Premium Economy",
+                                6865L
+                        },
+                        {
+                                "Jet Airways",
+                                "Business Class",
+                                2400L
+
+                        }
+                }
+        },
+        {
+                "Rajasthan",
+                4,
+                {
+                        {
+                                "Vistara",
+                                "Economy",
+                                3474L
+                        },
+                        {
+                                "Air India",
+                                "Premium Economy",
+                                4562L
+                        },
+                        {
+                                "Jet Airways",
+                                "Business Class",
+                                26250L
+
+                        }
+                }
+        },
+        {
+                "Banglore",
+                5,
+                {
+                        {
+                                "Vistara",
+                                "Economy",
+                                5321L
+                        },
+                        {
+                                "Air India",
+                                "Premium Economy",
+                                12330L
+                        },
+                        {
+                                "Jet Airways",
+                                "Business Class",
+                                32161L
+
+                        }
+                }
+        },
+        {
+                "New Delhi",
+                6,
+                {
+                        {
+                                "Indian Railways",
+                                "AC 1st Tier",
+                                1245L
+                        },
+                        {
+                                "Indian Railways",
+                                "AC 2nd Tier",
+                                745L
+                        },
+                        {
+                                "Indian Railways",
+                                "AC 3rd Tier",
+                                540L
+
+                        }
+                }
+        },
+        {
+                "Shimla",
+                7,
+                {
+                        {
+                                "Indian Railways",
+                                "AC 1st Tier",
+                                470L
+                        },
+                        {
+                                "Indian Railways",
+                                "AC Chair Car",
+                                130L
+                        },
+                        {
+                                "Indian Railways",
+                                "Second Sitting",
+                                65L
+
+                        }
+                }
+        },
 };

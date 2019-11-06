@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "PassengerSelection.h"
+#include "DestinationSelection.h"
 int main() {
-    selectPassengers();
+    selectPackage();
     return 0;
 }

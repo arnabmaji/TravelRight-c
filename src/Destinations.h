@@ -7,6 +7,8 @@
 
 #endif //TRAVELRIGHT_DESTINATIONS_H
 
+static const int MAX_DESTINATIONS = 7;
+
 typedef struct {
     char name[30];
     int locationId;
@@ -18,7 +20,7 @@ typedef struct {
 
 } Destination;
 
-static const Destination INTERNATIONAL_DESTINATIONS[7] = {
+static Destination INTERNATIONAL_DESTINATIONS[7] = {
         {
                 "Dubai",
                 1,

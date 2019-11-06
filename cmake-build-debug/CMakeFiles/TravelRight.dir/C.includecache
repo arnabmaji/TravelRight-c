@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelDetails.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/DestinationSelection.h
+Destinations.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Destinations.h
+stdio.h
+-
+
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Destinations.h
 
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c
 stdio.h
 -
-TravelDetails.h
-C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelDetails.h
+DestinationSelection.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/DestinationSelection.h
 

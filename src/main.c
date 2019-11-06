@@ -1,9 +1,6 @@
 #include <stdio.h>
-#include "Destinations.h"
-
-
-
+#include "DestinationSelection.h"
 int main() {
-    
+    selectPackage();
     return 0;
 }

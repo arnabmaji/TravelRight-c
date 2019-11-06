@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelDetails.h
+
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c
+stdio.h
+-
+TravelDetails.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelDetails.h
+

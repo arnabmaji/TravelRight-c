@@ -7,10 +7,6 @@
 
 #endif //TRAVELRIGHT_DESTINATIONSELECTION_H
 
-#include "Destinations.h"
-#include "TravelData.h"
-#include <stdio.h>
-
 void selectPackage(){
     printf("Select your Package:\n");
     printf("\t1. National Package");
@@ -67,7 +63,7 @@ void selectPackage(){
     }
     if(confirmation == 0){
         //Save user's package
-        SELECTED_PACKAGE_TYPE = packageType;
+        SELECTED_TRIP_TYPE = packageType;
         SELECTED_DESTINATION = selectedPlace;
         SELECTED_CLASS_OF_TRAVEL = selectedCarrier;
         printf("Your selection has been recorded!\n");

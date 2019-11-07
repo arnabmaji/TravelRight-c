@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Accommodation.h">
+			<Option target="TravelRight"/>
+		</Unit>
+		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Billing.h">
+			<Option target="TravelRight"/>
+		</Unit>
 		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/DateSelection.h">
 			<Option target="TravelRight"/>
 		</Unit>
@@ -90,6 +96,9 @@
 			<Option target="TravelRight"/>
 		</Unit>
 		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelData.h">
+			<Option target="TravelRight"/>
+		</Unit>
+		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/UserData.h">
 			<Option target="TravelRight"/>
 		</Unit>
 		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c">

@@ -7,9 +7,6 @@
 
 #endif //TRAVELRIGHT_PASSENGERSELECTION_H
 
-#include <stdio.h>
-#include "TravelData.h"
-
 void selectPassengers(){
     int adults;
     int children;

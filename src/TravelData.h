@@ -7,20 +7,27 @@
 
 #endif //TRAVELRIGHT_TRAVELDATA_H
 
-//Package Data
-static int SELECTED_PACKAGE_TYPE; //0 for National, 1 for International
-static int SELECTED_DESTINATION; // from 0 to 6
-static int SELECTED_CLASS_OF_TRAVEL;
-static int JOURNEY_START_DAY;
-static int JOURNEY_START_MONTH;
-static int JOURNEY_START_YEAR;
-static int JOURNEY_END_DAY;
-static int JOURNEY_END_MONTH;
-static int JOURNEY_END_YEAR;
+static int EXTRA_CHARGE_FOR_SEASON[2] = {240, 480};
 
-//Passenger Data
-static int ADULT_COUNT;
-static int CHILDREN_COUNT;
+typedef struct {
+    int prices[3];
+} HotelPrice;
 
-//Local Travel Data
-static int LOCAL_TRAVEL_OPTION; //0 for no 1,2,3 for Other Available options
+static HotelPrice hotelPrice[2] = { //O for national hotels, 1 for International Hotels.
+        {400, 1000, 1500},
+        {1200, 2000, 3200}
+};
+
+typedef struct {
+    int prices[4];
+} PackagePrice;
+
+static PackagePrice packagePrice[2] = {
+        {100, 180, 350, 240},
+        {200, 280, 450, 340}
+};
+
+static int localTravelPrices[2][3] = {
+        {120, 150, 250},
+        {250, 450, 650}
+};

@@ -9,6 +9,7 @@
 
 
 void prepareBill(){
+    printf("----------------------------------Invoice----------------------------------\n");
     //Getting total passengers
     int totalPassengers = ADULT_COUNT + CHILDREN_COUNT;
 
@@ -44,6 +45,12 @@ void prepareBill(){
     }
     printf("\tCost: %ld\n",localTravelCost);
     printf("TOTAL COST: %ld\n",transportationCost+totalAccommodationCost+localTravelCost);
+    printf("----------------------------------Invoice----------------------------------\n");
 
-    printf("");
+    printf(".__________ ___     ___________ __     _____.___.             \n");
+    printf("\\__    ___/|  |__ _____    ____ |  | __ \\__  |   | ____  __ __ \n");
+    printf("  |    |   |  |  \\\\__  \\  /    \\|  |/ /  /   |   |/  _ \\|  |  \\\n");
+    printf("  |    |   |   Y  \\/ __ \\|   |  \\    <   \\____   (  <_> )  |  /\n");
+    printf("  |____|   |___|  (____  /___|  /__|_ \\  / ______|\\____/|____/ \n");
+    printf("                \\/     \\/     \\/     \\/  \\/                    \n");
 }

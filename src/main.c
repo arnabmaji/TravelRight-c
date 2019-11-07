@@ -16,6 +16,6 @@ int main() {
     selectDate();
     selectAccommodationPackage();
     displayLocalTravelOptions();
-prepareBill();
+    prepareBill();
     return 0;
 }

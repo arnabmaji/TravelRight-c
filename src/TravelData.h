@@ -7,7 +7,14 @@
 
 #endif //TRAVELRIGHT_TRAVELDATA_H
 
-static int EXTRA_CHARGE_FOR_SEASON[2] = {240, 480};
+
+typedef struct {
+    int day;
+    int month;
+    int year;
+} Date;
+
+
 
 typedef struct {
     int prices[3];
@@ -31,3 +38,5 @@ static int localTravelPrices[2][3] = {
         {120, 150, 250},
         {250, 450, 650}
 };
+
+static int EXTRA_CHARGE_FOR_SEASON[2] = {240, 480};

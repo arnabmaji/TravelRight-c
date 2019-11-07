@@ -7,13 +7,6 @@
 
 #endif //TRAVELRIGHT_USERDATA_H
 
-typedef struct {
-    int day;
-    int month;
-    int year;
-} Date;
-
-
 //Passenger Data
 static int ADULT_COUNT;
 static int CHILDREN_COUNT;

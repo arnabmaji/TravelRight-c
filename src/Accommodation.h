@@ -18,7 +18,7 @@ void selectAccommodationPackage(){
     accommodationSelection--;
     printf("Please select your Package Type:\n");
     printf("1. European Package\n"
-           "2. Canadian Package\n"
+           "2. Continental Package\n"
            "3. American Package\n"
            "4. Modified American Package\n");
     int packageType;
@@ -31,7 +31,7 @@ void selectAccommodationPackage(){
     printf("Please verify your selection:\n");
     printf("Accommodation Fee: %d(Per Head, Per Day)\n"
            "Package Fee: %d(Per Head, Per Day)\n",(hotelPrice[SELECTED_TRIP_TYPE].prices[accommodationSelection] +
-           (SEASON_STATUS * (EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]))), packagePrice[SELECTED_TRIP_TYPE].prices[packageType-1]);
+           (SEASON_STATUS * (EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]))),packagePrice[SELECTED_TRIP_TYPE].prices[packageType]);
     printf("Enter 0 to confirm or 1 to try again:\n");
     int confirmation;
     scanf("%d",&confirmation);

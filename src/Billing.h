@@ -29,8 +29,8 @@ void prepareBill(){
     //Determining Accommodation Cost
     printf("Accommodation Cost:\n");
     long accommodationCostPerDay = ( hotelPrice[SELECTED_TRIP_TYPE].prices[SELECTED_ACCOMMODATION_TYPE]
-            + SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]
-            + packagePrice[SELECTED_TRIP_TYPE].prices[SELECTED_PACKAGE_TYPE] )
+            + (SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE])
+            + (packagePrice[SELECTED_TRIP_TYPE].prices[SELECTED_PACKAGE_TYPE] * SELECTED_ACCOMMODATION_TYPE) )
                     * totalPassengers;
 
     long totalAccommodationCost = accommodationCostPerDay * TRIP_LENGTH;

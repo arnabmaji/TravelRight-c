@@ -21,8 +21,8 @@ typedef struct {
 } HotelPrice;
 
 static HotelPrice hotelPrice[2] = { //O for national hotels, 1 for International Hotels.
-        {400, 1000, 1500},
-        {1200, 2000, 3200}
+        {1200, 3600, 6500},
+        {4500, 7500, 12200}
 };
 
 typedef struct {
@@ -30,8 +30,8 @@ typedef struct {
 } PackagePrice;
 
 static PackagePrice packagePrice[2] = {
-        {100, 180, 350, 240},
-        {200, 280, 450, 340}
+        {0, 180, 350, 240},
+        {0, 280, 450, 340}
 };
 
 static int localTravelPrices[2][3] = {
@@ -39,4 +39,4 @@ static int localTravelPrices[2][3] = {
         {250, 450, 650}
 };
 
-static int EXTRA_CHARGE_FOR_SEASON[2] = {240, 480};
+static int EXTRA_CHARGE_FOR_SEASON[2] = {1240, 41480};

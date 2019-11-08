@@ -49,7 +49,7 @@ void selectPackage(){
     }
     selectedCarrier--;
     printf("Please verify your package:\n");
-    printf("Destination: %s\n", destination[packageType][selectedPlace].name);
+    printf("\tDestination: %s\n", destination[packageType][selectedPlace].name);
     printf("\tCarrier Name: %s\n", destination[packageType][selectedPlace].carriers[selectedCarrier].carrierName);
     printf("\tClass of Travel: %s\n", destination[packageType][selectedPlace].carriers[selectedCarrier].classOfTravel);
     printf("\tBase Fare: %ld\n\n", destination[packageType][selectedPlace].carriers[selectedCarrier].baseFare);

@@ -240,7 +240,7 @@ static Destination NATIONAL_DESTINATIONS[7] = {
                         {
                                 "Jet Airways",
                                 "Business Class",
-                                2400L
+                                14400L
 
                         }
                 }

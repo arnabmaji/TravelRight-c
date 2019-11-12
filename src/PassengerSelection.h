@@ -18,15 +18,17 @@ void selectPassengers(){
     printf("Please verify your co-passengers:\n");
     printf("\tAdults: %d\n",adults);
     printf("\tChildren: %d\n",children);
-    printf("Enter 0 to confirm or 1 to try again:\n");
-    int confirmation;
-    scanf("%d",&confirmation);
-    while(confirmation < 0 || confirmation > 1){
-        printf("not a valid selection.\n");
-        printf("try again!");
-        scanf("%d",&confirmation);
+    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    char confirmation;
+    fflush(stdin);
+    scanf("%c",&confirmation);
+    while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
+        printf("Oops! not a valid selection.\n");
+        printf("try again!\n");
+        fflush(stdin);
+        scanf("%c",&confirmation);
     }
-    if(confirmation == 0){
+    if(confirmation == 'Y' || confirmation == 'y'){
         //Save passengers list
         ADULT_COUNT = adults;
         CHILDREN_COUNT = children;

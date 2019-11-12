@@ -53,15 +53,17 @@ void selectPackage(){
     printf("\tCarrier Name: %s\n", destination[packageType][selectedPlace].carriers[selectedCarrier].carrierName);
     printf("\tClass of Travel: %s\n", destination[packageType][selectedPlace].carriers[selectedCarrier].classOfTravel);
     printf("\tBase Fare: %ld\n\n", destination[packageType][selectedPlace].carriers[selectedCarrier].baseFare);
-    printf("Enter 0 to confirm or 1 to view another:\n");
-    int confirmation;
-    scanf("%d",&confirmation);
-    while(confirmation < 0 || confirmation > 1){
+    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    char confirmation;
+    fflush(stdin);
+    scanf("%c",&confirmation);
+    while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
         printf("Oops! not a valid selection.\n");
         printf("try again!\n");
-        scanf("%d",&confirmation);
+        fflush(stdin);
+        scanf("%c",&confirmation);
     }
-    if(confirmation == 0){
+    if(confirmation == 'Y' || confirmation == 'y'){
         //Save user's package
         SELECTED_TRIP_TYPE = packageType;
         SELECTED_DESTINATION = selectedPlace;

@@ -35,8 +35,8 @@ static PackagePrice packagePrice[2] = {
 };
 
 static int localTravelPrices[2][3] = {
-        {120, 150, 250},
-        {250, 450, 650}
+        {240, 350, 550},
+        {750, 1250, 1800}
 };
 
 static int EXTRA_CHARGE_FOR_SEASON[2] = {1240, 41480};

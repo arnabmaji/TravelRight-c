@@ -32,10 +32,17 @@ void selectAccommodationPackage(){
     printf("Accommodation Fee: %d(Per Head, Per Day)\n"
            "Package Fee: %d(Per Head, Per Day)\n",(hotelPrice[SELECTED_TRIP_TYPE].prices[accommodationSelection] +
            (SEASON_STATUS * (EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]))),packagePrice[SELECTED_TRIP_TYPE].prices[packageType]);
-    printf("Enter 0 to confirm or 1 to try again:\n");
-    int confirmation;
-    scanf("%d",&confirmation);
-    if(confirmation == 0){
+    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    char confirmation;
+    fflush(stdin);
+    scanf("%c",&confirmation);
+    while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
+        printf("Oops! not a valid selection.\n");
+        printf("try again!\n");
+        fflush(stdin);
+        scanf("%c",&confirmation);
+    }
+    if(confirmation == 'Y' || confirmation == 'y'){
         //Save user's selection.
         SELECTED_ACCOMMODATION_TYPE = accommodationSelection;
         SELECTED_PACKAGE_TYPE = packageType;

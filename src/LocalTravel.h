@@ -9,10 +9,17 @@
 
 void displayLocalTravelOptions(){
     printf("Do you want to opt for Local Travel for transportation or sight seeing?\n");
-    printf("Enter 0 to allow or 1 to deny.\n");
-    int confirmation;
-    scanf("%d",&confirmation);
-    if(confirmation == 1){
+    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    char confirmation;
+    fflush(stdin);
+    scanf("%c",&confirmation);
+    while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
+        printf("Oops! not a valid selection.\n");
+        printf("try again!\n");
+        fflush(stdin);
+        scanf("%c",&confirmation);
+    }
+    if(confirmation == 'n' || confirmation == 'N'){
         printf("Thank you for your choice!\n");
         SELECTED_LOCAL_TRAVEL_OPTION = 0;
         return;
@@ -29,9 +36,16 @@ void displayLocalTravelOptions(){
         scanf("%d",&localTravelOption);
     }
     localTravelOption--;
-    printf("Enter 0 to confirm or 1 to try again!\n");
-    scanf("%d",&confirmation);
-    if(confirmation == 0){
+    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    fflush(stdin);
+    scanf("%c",&confirmation);
+    while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
+        printf("Oops! not a valid selection.\n");
+        printf("try again!\n");
+        fflush(stdin);
+        scanf("%c",&confirmation);
+    }
+    if(confirmation == 'Y' || confirmation == 'y'){
         //Save Local Travel Options
         SELECTED_LOCAL_TRAVEL_OPTION = localTravelOption;
     } else {

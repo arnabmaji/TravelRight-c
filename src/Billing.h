@@ -9,7 +9,7 @@
 
 
 void prepareBill(){
-    printf("----------------------------------Invoice----------------------------------\n");
+    printf("----------------------------------------Invoice----------------------------------------\n");
     //Getting total passengers
     int totalPassengers = ADULT_COUNT + CHILDREN_COUNT;
 
@@ -45,7 +45,7 @@ void prepareBill(){
     }
     printf("\tCost: %ld\n",localTravelCost);
     printf("TOTAL COST: %ld\n",transportationCost+totalAccommodationCost+localTravelCost);
-    printf("----------------------------------Invoice----------------------------------\n");
+    printf("----------------------------------------Invoice----------------------------------------\n");
 
     printf(".__________ ___     ___________ __     _____.___.             \n");
     printf("\\__    ___/|  |__ _____    ____ |  | __ \\__  |   | ____  __ __ \n");
@@ -53,13 +53,13 @@ void prepareBill(){
     printf("  |    |   |   Y  \\/ __ \\|   |  \\    <   \\____   (  <_> )  |  /\n");
     printf("  |____|   |___|  (____  /___|  /__|_ \\  / ______|\\____/|____/ \n");
     printf("                \\/     \\/     \\/     \\/  \\/                    \n");
-    printf("-----------------©2019 TravelRight Inc, All Rights Reserved-----------------");
+    printf("-----------------------©2019 TravelRight Inc, All Rights Reserved-----------------------");
 }
 
 void saveBill(){
     FILE *bill = fopen("bill.txt", "w");
 
-    fprintf(bill, "----------------------------------Invoice----------------------------------\n");
+    fprintf(bill, "----------------------------------------Invoice----------------------------------------\n");
     //Getting total passengers
     int totalPassengers = ADULT_COUNT + CHILDREN_COUNT;
 
@@ -95,7 +95,7 @@ void saveBill(){
     }
     fprintf(bill, "\tCost: %ld\n",localTravelCost);
     fprintf(bill, "TOTAL COST: %ld\n",transportationCost+totalAccommodationCost+localTravelCost);
-    fprintf(bill, "----------------------------------Invoice----------------------------------\n");
+    fprintf(bill, "----------------------------------------Invoice----------------------------------------\n");
 
     fprintf(bill, ".__________ ___     ___________ __     _____.___.             \n");
     fprintf(bill, "\\__    ___/|  |__ _____    ____ |  | __ \\__  |   | ____  __ __ \n");
@@ -103,7 +103,7 @@ void saveBill(){
     fprintf(bill, "  |    |   |   Y  \\/ __ \\|   |  \\    <   \\____   (  <_> )  |  /\n");
     fprintf(bill, "  |____|   |___|  (____  /___|  /__|_ \\  / ______|\\____/|____/ \n");
     fprintf(bill, "                \\/     \\/     \\/     \\/  \\/                    \n");
-    fprintf(bill, "-----------------©2019 TravelRight Inc, All Rights Reserved-----------------");
+    fprintf(bill, "-----------------------©2019 TravelRight Inc, All Rights Reserved-----------------------");
 
     fclose(bill);
 }

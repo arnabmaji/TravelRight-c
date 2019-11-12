@@ -38,9 +38,12 @@ int getDifference(Date dt1, Date dt2)
 }
 
 void selectDate(){
+    printf("\n-------------------------------------Date Selection-------------------------------------\n");
     printf("Please enter date of journey:(dd:mm:yyyy):\n");
+    printf("%*s", SPACING, "Response:");
     scanf("%d%*c%d%*c%d",&DATE_OF_JOURNEY.day,&DATE_OF_JOURNEY.month,&DATE_OF_JOURNEY.year);
     printf("Please enter date of return:(dd:mm:yyyy):\n");
+    printf("%*s", SPACING, "Response:");
     scanf("%d%*c%d%*c%d",&DATE_OF_RETURN.day,&DATE_OF_RETURN.month,&DATE_OF_RETURN.year);
     printf("Please verify your dates:\n");
     printf("\tDate of Journey:%02d:%02d:%d\n",DATE_OF_JOURNEY.day,DATE_OF_JOURNEY.month,DATE_OF_JOURNEY.year);
@@ -48,11 +51,13 @@ void selectDate(){
     printf("Press 'Y' to confirm or 'N' to view another:\n");
     char confirmation;
     fflush(stdin);
+    printf("%*s", SPACING, "Response:");
     scanf("%c",&confirmation);
     while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
         printf("Oops! not a valid selection.\n");
         printf("try again!\n");
         fflush(stdin);
+        printf("%*s", SPACING, "Response:");
         scanf("%c",&confirmation);
     }
 

@@ -7,6 +7,7 @@
 
 #endif //TRAVELRIGHT_TRAVELDATA_H
 
+static const int SPACING = 80;
 
 typedef struct {
     int day;

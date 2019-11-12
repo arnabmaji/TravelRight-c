@@ -8,28 +8,32 @@
 #endif //TRAVELRIGHT_DESTINATIONSELECTION_H
 
 void selectPackage(){
+    printf("\n-----------------------------------Package Selection-----------------------------------\n");
     printf("Select your Package:\n");
-    printf("\t1. National Package");
-    printf("\t2. International Package");
-    printf("\n");
+    printf("\t1. National Package\n");
+    printf("\t2. International Package\n");
     int packageType;
+    printf("%*s", SPACING, "Response:");
     scanf("%d",&packageType);
     while(packageType < 1 || packageType > 2){
         printf("Oops! not a valid selection.\n");
         printf("try again!\n");
+        printf("%*s",SPACING, "Response:");
         scanf("%d",&packageType);
     }
     packageType--;
     Destination *destination[] = {NATIONAL_DESTINATIONS , INTERNATIONAL_DESTINATIONS};
-    printf("Select a beautiful place for you:\n");
+    printf("\nSelect a beautiful place for you:\n");
     for(int i=0;i<MAX_DESTINATIONS;i++){
         printf("%d. %s\n", (i+1), destination[packageType][i].name);
     }
     int selectedPlace;
+    printf("%*s", SPACING, "Response:");
     scanf("%d",&selectedPlace);
     while(selectedPlace < 1 || selectedPlace > MAX_DESTINATIONS){
-        printf("Oops! not a valid selection.\n");
+        printf("\nOops! not a valid selection.\n");
         printf("try again!\n");
+        printf("%*s", SPACING, "Response:");
         scanf("%d",&selectedPlace);
     }
     selectedPlace--;
@@ -41,10 +45,12 @@ void selectPackage(){
         printf("\tBase Fare: %ld\n\n", destination[packageType][selectedPlace].carriers[i].baseFare);
     }
     int selectedCarrier;
+    printf("%*s", SPACING, "Response:");
     scanf("%d",&selectedCarrier);
     while(selectedCarrier < 1 || selectedCarrier > 3){
         printf("Oops! not a valid selection.\n");
         printf("try again!\n");
+        printf("%*s", SPACING, "Response:");
         scanf("%d",&selectedCarrier);
     }
     selectedCarrier--;
@@ -56,11 +62,13 @@ void selectPackage(){
     printf("Press 'Y' to confirm or 'N' to view another:\n");
     char confirmation;
     fflush(stdin);
+    printf("%*s", SPACING, "Response:");
     scanf("%c",&confirmation);
     while((confirmation != 'y' && confirmation != 'Y')  && (confirmation != 'n' && confirmation != 'N')){
         printf("Oops! not a valid selection.\n");
         printf("try again!\n");
         fflush(stdin);
+        printf("%*s", SPACING, "Response:");
         scanf("%c",&confirmation);
     }
     if(confirmation == 'Y' || confirmation == 'y'){

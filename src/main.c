@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "TravelData.h"
 #include "UserData.h"
+#include "WelcomePrompt.h"
 #include "Destinations.h"
 #include "DestinationSelection.h"
 #include "PassengerSelection.h"
@@ -11,11 +12,13 @@
 
 
 int main() {
+    showWelcomePrompt();
     selectPackage();
     selectPassengers();
     selectDate();
     selectAccommodationPackage();
     displayLocalTravelOptions();
     prepareBill();
+    saveBill();
     return 0;
 }

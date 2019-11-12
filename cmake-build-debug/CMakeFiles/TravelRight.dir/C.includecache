@@ -24,6 +24,8 @@ C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelData.h
 
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/UserData.h
 
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/WelcomePrompt.h
+
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c
 stdio.h
 -
@@ -31,6 +33,8 @@ TravelData.h
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/TravelData.h
 UserData.h
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/UserData.h
+WelcomePrompt.h
+C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/WelcomePrompt.h
 Destinations.h
 C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/Destinations.h
 DestinationSelection.h

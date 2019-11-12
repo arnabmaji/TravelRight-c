@@ -101,6 +101,9 @@
 		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/UserData.h">
 			<Option target="TravelRight"/>
 		</Unit>
+		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/WelcomePrompt.h">
+			<Option target="TravelRight"/>
+		</Unit>
 		<Unit filename="C:/Users/Arnab.DESKTOP-T21M6VJ.000/CLionProjects/TravelRight/src/main.c">
 			<Option target="TravelRight"/>
 		</Unit>

@@ -3,4 +3,4 @@ project(TravelRight C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(TravelRight src/main.c src/Destinations.h src/DestinationSelection.h src/TravelData.h src/PassengerSelection.h src/DateSelection.h src/LocalTravel.h src/Accommodation.h src/UserData.h src/Billing.h)
+add_executable(TravelRight src/main.c src/Destinations.h src/DestinationSelection.h src/TravelData.h src/PassengerSelection.h src/DateSelection.h src/LocalTravel.h src/Accommodation.h src/UserData.h src/Billing.h src/WelcomePrompt.h)

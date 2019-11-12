@@ -10,5 +10,6 @@ CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/LocalTravel.h
 CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/PassengerSelection.h
 CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/TravelData.h
 CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/UserData.h
+CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/WelcomePrompt.h
 CMakeFiles/TravelRight.dir/src/main.c.obj: ../src/main.c
 

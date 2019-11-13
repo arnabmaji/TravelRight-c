@@ -15,29 +15,90 @@ typedef struct {
     int year;
 } Date;
 
-
-
 typedef struct {
-    int prices[3];
-} HotelPrice;
+    char rating[10];
+    int price;
+} Hotel;
 
-static HotelPrice hotelPrice[2] = { //O for national hotels, 1 for International Hotels.
-        {1200, 3600, 6500},
-        {4500, 7500, 12200}
+Hotel HOTELS[2][3] = {
+        {
+                {
+                        "Three Star",
+                        1200
+                },
+                {
+                        "Five Star",
+                        3600
+                },
+                {
+                        "Seven Star",
+                        6500
+                }
+        },
+        {
+                {
+                        "Three Star",
+                        4500
+                },
+                {
+                        "Five Star",
+                        7500
+                },
+                {
+                        "Seven Star",
+                        12200
+                }
+        }
 };
 
 typedef struct {
-    int prices[4];
-} PackagePrice;
+    char name[30];
+    int price;
+} Package;
 
-static PackagePrice packagePrice[2] = {
-        {0, 180, 350, 240},
-        {0, 280, 450, 340}
+Package PACKAGES[2][4] = {
+        {
+                {
+                    "European Package",
+                    0
+                },
+                {
+                        "Continental Package",
+                        180
+                },
+                {
+                        "American Package",
+                        350
+                },
+                {
+                        "Modified American Package",
+                        240
+                }
+        },
+        {
+                {
+                        "European Package",
+                        0
+                },
+                {
+                        "Continental Package",
+                        280
+                },
+                {
+                        "American Package",
+                        450
+                },
+                {
+                        "Modified American Package",
+                        340
+                }
+        }
 };
+
 
 static int localTravelPrices[2][3] = {
         {240, 350, 550},
         {750, 1250, 1800}
 };
 
-static int EXTRA_CHARGE_FOR_SEASON[2] = {1240, 41480};
+static int EXTRA_CHARGE_FOR_SEASON[2] = {1240, 4480};

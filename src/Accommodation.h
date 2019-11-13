@@ -11,9 +11,12 @@
 void selectAccommodationPackage(){
     printf("\n-----------------------------Accommodation Selection-----------------------------\n");
     printf("Please select your accommodation type:\n");
-    printf("\t1. Three Star Hotel\n");
-    printf("\t2. Five Star Hotel\n");
-    printf("\t3. Seven Star Hotel\n");
+
+    for(int i=0;i<3;i++){
+        printf("\t%d. %s Hotel(Price %d per head, per day)\n", (i+1),
+               HOTELS[SELECTED_TRIP_TYPE][i].rating, HOTELS[SELECTED_TRIP_TYPE][i].price
+               + SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]);
+    }
     int accommodationSelection;
     printf("%*s", SPACING, "Response:");
     scanf("%d",&accommodationSelection);
@@ -25,10 +28,10 @@ void selectAccommodationPackage(){
     }
     accommodationSelection--;
     printf("Please select your Package Type:\n");
-    printf("1. European Package\n"
-           "2. Continental Package\n"
-           "3. American Package\n"
-           "4. Modified American Package\n");
+    for(int i=0;i<4;i++){
+        printf("\t%d. %s(%d per head, per day)\n", (i+1),
+                PACKAGES[SELECTED_TRIP_TYPE][i].name, PACKAGES[SELECTED_TRIP_TYPE][i].price);
+    }
     int packageType;
     printf("%*s", SPACING, "Response:");
     scanf("%d",&packageType);
@@ -39,9 +42,12 @@ void selectAccommodationPackage(){
     }
     packageType--;
     printf("Please verify your selection:\n");
-    printf("Accommodation Fee: %d(Per Head, Per Day)\n"
-           "Package Fee: %d(Per Head, Per Day)\n",(hotelPrice[SELECTED_TRIP_TYPE].prices[accommodationSelection] +
-           (SEASON_STATUS * (EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]))),packagePrice[SELECTED_TRIP_TYPE].prices[packageType]);
+    printf("\t%s Hotel(Price %d per head, per day)\n",
+           HOTELS[SELECTED_TRIP_TYPE][accommodationSelection].rating,
+           HOTELS[SELECTED_TRIP_TYPE][accommodationSelection].price
+           + SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]);
+    printf("\t%s(%d per head, per day)\n",
+           PACKAGES[SELECTED_TRIP_TYPE][packageType].name, PACKAGES[SELECTED_TRIP_TYPE][packageType].price);
     printf("Press 'Y' to confirm or 'N' to view another:\n");
     char confirmation;
     fflush(stdin);

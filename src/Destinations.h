@@ -268,7 +268,7 @@ static Destination NATIONAL_DESTINATIONS[7] = {
                 }
         },
         {
-                "Banglore",
+                "Bangalore",
                 5,
                 {
                         {

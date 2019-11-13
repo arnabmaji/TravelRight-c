@@ -12,13 +12,12 @@
 
 
 int main() {
-    showWelcomePrompt();
-    selectPackage();
-    selectPassengers();
+//    showWelcomePrompt();
+//    selectPackage();
+//    selectPassengers();
     selectDate();
-    selectAccommodationPackage();
-    displayLocalTravelOptions();
-    prepareBill();
-    saveBill();
+//    selectAccommodationPackage();
+//    displayLocalTravelOptions();
+//    prepareBill();
     return 0;
 }

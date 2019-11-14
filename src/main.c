@@ -16,14 +16,15 @@ void holdCommandLine(){
     scanf("%c",&c);
 }
 
-int main() {
-    showWelcomePrompt();
-    selectPackage();
-    selectPassengers();
-    selectDate();
-    selectAccommodationPackage();
-    displayLocalTravelOptions();
-    prepareBill();
+    int main() {
+        showWelcomePrompt();
+        selectPackage();
+        selectPassengers();
+        selectDate();
+        selectAccommodationPackage();
+        displayLocalTravelOptions();
+        prepareBill();
+    saveBill();
     holdCommandLine();
     return 0;
 }

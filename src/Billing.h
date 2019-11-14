@@ -27,7 +27,7 @@ void prepareBill(){
     printf("\tChildren: %d\n", CHILDREN_COUNT);
 
     //Determining Transportation cost
-    printf("Transportation Cost:\n");
+    printf("Transportation Details:\n");
     printf("\tDestination: %s\n", selectedDestination->name);
     printf("\tCarrier: %s\n", selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].carrierName);
     printf("\tClass of Travel: %s\n",selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].classOfTravel);
@@ -38,7 +38,7 @@ void prepareBill(){
     printf("\tTotal (For %d Passengers): %ld\n",totalPassengers, transportationCost );
 
     //Determining Accommodation Cost
-    printf("Accommodation Cost:\n");
+    printf("Accommodation Details:\n");
     printf("\t%s Hotel(Price %d per head, per day)\n",
            HOTELS[SELECTED_TRIP_TYPE][SELECTED_ACCOMMODATION_TYPE].rating,
            HOTELS[SELECTED_TRIP_TYPE][SELECTED_ACCOMMODATION_TYPE].price
@@ -56,7 +56,7 @@ void prepareBill(){
     printf("\tTotal (For %d days): %ld\n", TRIP_LENGTH, totalAccommodationCost);
 
     //Determining Local Travel cost if opted.
-    printf("Local Travel Cost:\n");
+    printf("Local Travel Details:\n");
     long localTravelCost = 0;
     if(SELECTED_LOCAL_TRAVEL_OPTION != -1){
         localTravelCost = LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].price
@@ -69,9 +69,9 @@ void prepareBill(){
     //Calculating total cost
     float totalBasePrice = (float) (transportationCost+totalAccommodationCost+localTravelCost);
     float gst = totalBasePrice * 0.18f;
-    printf("GST(of 18%): %.2f\n", gst);
+    printf("GST(of 18%%): %.2f\n", gst);
     printf("TOTAL COST: %.2f\n",totalBasePrice + gst);
-        printf("--------------------------------------------Invoice--------------------------------------------\n");
+    printf("--------------------------------------------Invoice--------------------------------------------\n");
 
     printf(".__________ ___     ___________ __     _____.___.             \n");
     printf("\\__    ___/|  |__ _____    ____ |  | __ \\__  |   | ____  __ __ \n");
@@ -79,5 +79,75 @@ void prepareBill(){
     printf("  |    |   |   Y  \\/ __ \\|   |  \\    <   \\____   (  <_> )  |  /\n");
     printf("  |____|   |___|  (____  /___|  /__|_ \\  / ______|\\____/|____/ \n");
     printf("                \\/     \\/     \\/     \\/  \\/                    \n");
-    printf("--------------------------©2019 TravelRight Inc, All Rights Reserved--------------------------");
+    printf("---------------------------2019 TravelRight Inc, All Rights Reserved--------------------------");
+}
+
+void saveBill(){
+    FILE *bill = fopen("bill.txt", "r");
+
+    fprintf(bill, "--------------------------------------------Invoice--------------------------------------------\n");
+    //Getting total passengers
+    int totalPassengers = ADULT_COUNT + CHILDREN_COUNT;
+
+    Destination *destination[] = {NATIONAL_DESTINATIONS , INTERNATIONAL_DESTINATIONS};
+    Destination *selectedDestination = &destination[SELECTED_TRIP_TYPE][SELECTED_DESTINATION];
+
+    //Journey Details
+    fprintf(bill, "Journey Details:\n");
+    fprintf(bill, "\tDestination: %s\n", selectedDestination->name);
+    fprintf(bill, "\tDate of Journey: %d:%d:%d\n",DATE_OF_JOURNEY.day
+            , DATE_OF_JOURNEY.month, DATE_OF_JOURNEY.year);
+    fprintf(bill, "\tDate of Return: %d:%d:%d\n",DATE_OF_RETURN.day
+            , DATE_OF_RETURN.month, DATE_OF_RETURN.year);
+    fprintf(bill, "\tAdult(s): %d\n", ADULT_COUNT);
+    fprintf(bill, "\tChildren: %d\n", CHILDREN_COUNT);
+
+    //Determining Transportation cost
+    fprintf(bill, "Transportation Details:\n");
+    fprintf(bill, "\tDestination: %s\n", selectedDestination->name);
+    fprintf(bill, "\tCarrier: %s\n", selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].carrierName);
+    fprintf(bill, "\tClass of Travel: %s\n",selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].classOfTravel);
+    fprintf(bill, "\tPrice: %ld(Per Head)\n", selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].baseFare);
+
+    long transportationCost = totalPassengers * selectedDestination
+            ->carriers[SELECTED_CLASS_OF_TRAVEL].baseFare;
+    fprintf(bill, "\tTotal (For %d Passengers): %ld\n",totalPassengers, transportationCost );
+
+    //Determining Accommodation Cost
+    fprintf(bill, "Accommodation Details:\n");
+    fprintf(bill, "\t%s Hotel(Price %d per head, per day)\n",
+           HOTELS[SELECTED_TRIP_TYPE][SELECTED_ACCOMMODATION_TYPE].rating,
+           HOTELS[SELECTED_TRIP_TYPE][SELECTED_ACCOMMODATION_TYPE].price
+           + SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]);
+    fprintf(bill, "\t%s(%d per head, per day)\n",
+           PACKAGES[SELECTED_TRIP_TYPE][SELECTED_PACKAGE_TYPE].name,
+           PACKAGES[SELECTED_TRIP_TYPE][SELECTED_PACKAGE_TYPE].price);
+
+    long accommodationCostPerDay = ((HOTELS[SELECTED_TRIP_TYPE][SELECTED_ACCOMMODATION_TYPE].price
+                                     + (SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]))
+                                    + PACKAGES[SELECTED_TRIP_TYPE][SELECTED_PACKAGE_TYPE].price) * totalPassengers;
+
+    long totalAccommodationCost = accommodationCostPerDay * TRIP_LENGTH;
+    fprintf(bill, "\tCost Per Day: %ld\n", accommodationCostPerDay);
+    fprintf(bill, "\tTotal (For %d days): %ld\n", TRIP_LENGTH, totalAccommodationCost);
+
+    //Determining Local Travel cost if opted.
+    fprintf(bill, "Local Travel Details:\n");
+    long localTravelCost = 0;
+    if(SELECTED_LOCAL_TRAVEL_OPTION != -1){
+        localTravelCost = LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].price
+                          * totalPassengers;
+        fprintf(bill, "\t%s(%d per Head)\n", LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].name,
+               LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].price);
+    }
+    fprintf(bill, "\tCost: %ld\n",localTravelCost);
+
+    //Calculating total cost
+    float totalBasePrice = (float) (transportationCost+totalAccommodationCost+localTravelCost);
+    float gst = totalBasePrice * 0.18f;
+    fprintf(bill, "GST(of 18%%): %.2f\n", gst);
+    fprintf(bill, "TOTAL COST: %.2f\n",totalBasePrice + gst);
+    fprintf(bill, "--------------------------------------------Invoice--------------------------------------------\n");
+
+    fclose(bill);
 }

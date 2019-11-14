@@ -96,7 +96,7 @@ Package PACKAGES[2][4] = {
 };
 
 typedef struct {
-    char name[30];
+    char name[40];
     int price;
 } LocalTravel;
 
@@ -111,7 +111,7 @@ LocalTravel LOCAL_TRAVEL[2][3] = {
                         650
                 },
                 {
-                        "Both",
+                        "Sight-Seeing with Transportation",
                         1000
                 }
         },
@@ -125,7 +125,7 @@ LocalTravel LOCAL_TRAVEL[2][3] = {
                         1650
                 },
                 {
-                        "Both",
+                        "Sight-Seeing with Transportation",
                         2600
                 }
         }

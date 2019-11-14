@@ -95,10 +95,40 @@ Package PACKAGES[2][4] = {
         }
 };
 
+typedef struct {
+    char name[30];
+    int price;
+} LocalTravel;
 
-static int localTravelPrices[2][3] = {
-        {240, 350, 550},
-        {750, 1250, 1800}
+LocalTravel LOCAL_TRAVEL[2][3] = {
+        {
+                {
+                    "Transportation Only",
+                    440
+                },
+                {
+                        "Sight-Seeing Only",
+                        650
+                },
+                {
+                        "Both",
+                        1000
+                }
+        },
+        {
+                {
+                        "Transportation Only",
+                        1250
+                },
+                {
+                        "Sight-Seeing Only",
+                        1650
+                },
+                {
+                        "Both",
+                        2600
+                }
+        }
 };
 
 static int EXTRA_CHARGE_FOR_SEASON[2] = {1240, 4480};

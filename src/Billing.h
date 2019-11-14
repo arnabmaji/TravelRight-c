@@ -9,13 +9,24 @@
 
 
 void prepareBill(){
-    printf("----------------------------------------Invoice----------------------------------------\n");
+    printf("--------------------------------------------Invoice--------------------------------------------\n");
     //Getting total passengers
     int totalPassengers = ADULT_COUNT + CHILDREN_COUNT;
 
-    //Determining Transportation cost
     Destination *destination[] = {NATIONAL_DESTINATIONS , INTERNATIONAL_DESTINATIONS};
     Destination *selectedDestination = &destination[SELECTED_TRIP_TYPE][SELECTED_DESTINATION];
+
+    //Journey Details
+    printf("Journey Details:\n");
+    printf("\tDestination: %s\n", selectedDestination->name);
+    printf("\tDate of Journey: %d:%d:%d\n",DATE_OF_JOURNEY.day
+                    , DATE_OF_JOURNEY.month, DATE_OF_JOURNEY.year);
+    printf("\tDate of Return: %d:%d:%d\n",DATE_OF_RETURN.day
+            , DATE_OF_RETURN.month, DATE_OF_RETURN.year);
+    printf("\tAdult(s): %d\n", ADULT_COUNT);
+    printf("\tChildren: %d\n", CHILDREN_COUNT);
+
+    //Determining Transportation cost
     printf("Transportation Cost:\n");
     printf("\tDestination: %s\n", selectedDestination->name);
     printf("\tCarrier: %s\n", selectedDestination->carriers[SELECTED_CLASS_OF_TRAVEL].carrierName);
@@ -48,11 +59,19 @@ void prepareBill(){
     printf("Local Travel Cost:\n");
     long localTravelCost = 0;
     if(SELECTED_LOCAL_TRAVEL_OPTION != -1){
-        localTravelCost = localTravelPrices[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION] * totalPassengers;
+        localTravelCost = LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].price
+                * totalPassengers;
+       printf("\t%s(%d per Head)\n", LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].name,
+           LOCAL_TRAVEL[SELECTED_TRIP_TYPE][SELECTED_LOCAL_TRAVEL_OPTION].price);
     }
     printf("\tCost: %ld\n",localTravelCost);
-    printf("TOTAL COST: %ld\n",transportationCost+totalAccommodationCost+localTravelCost);
-    printf("----------------------------------------Invoice----------------------------------------\n");
+
+    //Calculating total cost
+    float totalBasePrice = (float) (transportationCost+totalAccommodationCost+localTravelCost);
+    float gst = totalBasePrice * 0.18f;
+    printf("GST(of 18%): %.2f\n", gst);
+    printf("TOTAL COST: %.2f\n",totalBasePrice + gst);
+        printf("--------------------------------------------Invoice--------------------------------------------\n");
 
     printf(".__________ ___     ___________ __     _____.___.             \n");
     printf("\\__    ___/|  |__ _____    ____ |  | __ \\__  |   | ____  __ __ \n");
@@ -60,5 +79,5 @@ void prepareBill(){
     printf("  |    |   |   Y  \\/ __ \\|   |  \\    <   \\____   (  <_> )  |  /\n");
     printf("  |____|   |___|  (____  /___|  /__|_ \\  / ______|\\____/|____/ \n");
     printf("                \\/     \\/     \\/     \\/  \\/                    \n");
-    printf("-----------------------©2019 TravelRight Inc, All Rights Reserved-----------------------");
+    printf("--------------------------©2019 TravelRight Inc, All Rights Reserved--------------------------");
 }

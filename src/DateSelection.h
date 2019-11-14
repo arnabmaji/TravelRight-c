@@ -38,7 +38,7 @@ int getDifference(Date dt1, Date dt2)
 }
 
 void selectDate(){
-    printf("\n-------------------------------------Date Selection-------------------------------------\n");
+    printf("\n----------------------------------------Date Selection----------------------------------------\n");
     printf("Please enter date of journey(dd:mm:yyyy):\n");
     printf("%*s", SPACING, "Response:");
     scanf("%d%*c%d%*c%d",&DATE_OF_JOURNEY.day,&DATE_OF_JOURNEY.month,&DATE_OF_JOURNEY.year);
@@ -48,7 +48,7 @@ void selectDate(){
     printf("\nPlease verify your dates:\n");
     printf("\tDate of Journey:%02d:%02d:%d\n",DATE_OF_JOURNEY.day,DATE_OF_JOURNEY.month,DATE_OF_JOURNEY.year);
     printf("\tDate of Return:%02d:%02d:%d\n",DATE_OF_RETURN.day,DATE_OF_RETURN.month,DATE_OF_RETURN.year);
-    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    printf("Press 'Y' to confirm or 'N' to enter again:\n");
     char confirmation;
     fflush(stdin);
     printf("%*s", SPACING, "Response:");
@@ -71,7 +71,8 @@ void selectDate(){
             return;
         }
         int month = DATE_OF_JOURNEY.month;
-        if((month >= 8 && month <= 12) || (month >= 1 && month <= 3)){
+        //Season Months: OCT, NOV, DEC, JAN, FEB
+        if((month >= 10 && month <= 12) || (month >= 1 && month <= 2)){
             //Season Prices are High.
             SEASON_STATUS = 1;
         }

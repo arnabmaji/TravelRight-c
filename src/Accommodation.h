@@ -9,7 +9,7 @@
 
 
 void selectAccommodationPackage(){
-    printf("\n-----------------------------Accommodation Selection-----------------------------\n");
+    printf("\n------------------------------------Accommodation Selection------------------------------------\n");
     printf("Please select your accommodation type:\n");
 
     for(int i=0;i<3;i++){
@@ -48,7 +48,7 @@ void selectAccommodationPackage(){
            + SEASON_STATUS * EXTRA_CHARGE_FOR_SEASON[SELECTED_TRIP_TYPE]);
     printf("\t%s(%d per head, per day)\n",
            PACKAGES[SELECTED_TRIP_TYPE][packageType].name, PACKAGES[SELECTED_TRIP_TYPE][packageType].price);
-    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    printf("Press 'Y' to confirm or 'N' to try another:\n");
     char confirmation;
     fflush(stdin);
     printf("%*s", SPACING, "Response:");

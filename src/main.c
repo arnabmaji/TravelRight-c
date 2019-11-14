@@ -10,14 +10,20 @@
 #include "LocalTravel.h"
 #include "Billing.h"
 
+void holdCommandLine(){
+    char c;
+    fflush(stdin);
+    scanf("%c",&c);
+}
 
 int main() {
-//    showWelcomePrompt();
-//    selectPackage();
-//    selectPassengers();
+    showWelcomePrompt();
+    selectPackage();
+    selectPassengers();
     selectDate();
-//    selectAccommodationPackage();
-//    displayLocalTravelOptions();
-//    prepareBill();
+    selectAccommodationPackage();
+    displayLocalTravelOptions();
+    prepareBill();
+    holdCommandLine();
     return 0;
 }

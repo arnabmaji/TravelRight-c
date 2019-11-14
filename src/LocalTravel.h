@@ -8,7 +8,7 @@
 #endif //TRAVELRIGHT_LOCALTRAVEL_H
 
 void displayLocalTravelOptions(){
-    printf("\n------------------------------------Local Travel Options------------------------------------\n");
+    printf("\n-----------------------------------------Local Travel-----------------------------------------\n");
     printf("Do you want to opt for Local Travel for transportation or sight seeing?\n");
     printf("Press 'Y' to proceed or 'N' to cancel:\n");
     char confirmation;
@@ -24,13 +24,14 @@ void displayLocalTravelOptions(){
     }
     if(confirmation == 'n' || confirmation == 'N'){
         printf("Thank you for your choice!\n");
-        SELECTED_LOCAL_TRAVEL_OPTION = 0;
+        SELECTED_LOCAL_TRAVEL_OPTION = -1;
         return;
     }
     printf("Please select your local travel options:\n");
-    printf("\t1. For Transportation only(%d Per Head)\n",localTravelPrices[SELECTED_TRIP_TYPE][0]);
-    printf("\t2. For Sight Seeing only(%d Per Head)\n",localTravelPrices[SELECTED_TRIP_TYPE][1]);
-    printf("\t3. Both(%d Per Head)\n",localTravelPrices[SELECTED_TRIP_TYPE][2]);
+    for(int i=0;i<3;i++){
+        printf("\t%d. %s(%d per Head)\n",(i+1), LOCAL_TRAVEL[SELECTED_TRIP_TYPE][i].name,
+               LOCAL_TRAVEL[SELECTED_TRIP_TYPE][i].price);
+    }
     int localTravelOption;
     printf("%*s", SPACING, "Response:");
     scanf("%d",&localTravelOption);
@@ -41,7 +42,7 @@ void displayLocalTravelOptions(){
         scanf("%d",&localTravelOption);
     }
     localTravelOption--;
-    printf("\nPress 'Y' to confirm or 'N' to view another:\n");
+    printf("\nPress 'Y' to confirm or 'N' to try again:\n");
     fflush(stdin);
     printf("%*s", SPACING, "Response:");
     scanf("%c",&confirmation);

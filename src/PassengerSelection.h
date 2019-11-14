@@ -21,7 +21,7 @@ void selectPassengers(){
     printf("Please verify your co-passengers:\n");
     printf("\tAdults: %d\n",adults);
     printf("\tChildren: %d\n",children);
-    printf("Press 'Y' to confirm or 'N' to view another:\n");
+    printf("Press 'Y' to confirm or 'N' to enter again:\n");
     char confirmation;
     fflush(stdin);
     printf("%*s", SPACING, "Response:");

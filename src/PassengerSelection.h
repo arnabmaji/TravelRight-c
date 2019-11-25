@@ -8,7 +8,7 @@
 #endif //TRAVELRIGHT_PASSENGERSELECTION_H
 
 void selectPassengers(){
-    printf("\n--------------------------------------Passenger Selection--------------------------------------\n");
+    printf("\n--------------------------------------Passenger Selection--------------------------------------\n\n");
     int adults;
     int children;
     printf("Please select your co-passengers carefully...\n");

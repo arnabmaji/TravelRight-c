@@ -8,7 +8,7 @@
 #endif //TRAVELRIGHT_DESTINATIONSELECTION_H
 
 void selectPackage(){
-    printf("\n---------------------------------------Package Selection---------------------------------------\n");
+    printf("\n---------------------------------------Package Selection---------------------------------------\n\n");
     printf("Select your Package:\n");
     printf("\t1. National Package\n");
     printf("\t2. International Package\n");

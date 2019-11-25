@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <pbt.h>
 #include "TravelData.h"
 #include "UserData.h"
 #include "WelcomePrompt.h"
@@ -16,14 +18,14 @@ void holdCommandLine(){
     scanf("%c",&c);
 }
 
-    int main() {
-        showWelcomePrompt();
-        selectPackage();
-        selectPassengers();
-        selectDate();
-        selectAccommodationPackage();
-        displayLocalTravelOptions();
-        prepareBill();
+int main() {
+    showWelcomePrompt();
+    selectPackage();
+    selectPassengers();
+    selectDate();
+    selectAccommodationPackage();
+    displayLocalTravelOptions();
+    prepareBill();
     saveBill();
     holdCommandLine();
     return 0;

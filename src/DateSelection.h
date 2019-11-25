@@ -38,7 +38,7 @@ int getDifference(Date dt1, Date dt2)
 }
 
 void selectDate(){
-    printf("\n----------------------------------------Date Selection----------------------------------------\n");
+    printf("\n----------------------------------------Date Selection----------------------------------------\n\n");
     printf("Please enter date of journey(dd:mm:yyyy):\n");
     printf("%*s", SPACING, "Response:");
     scanf("%d%*c%d%*c%d",&DATE_OF_JOURNEY.day,&DATE_OF_JOURNEY.month,&DATE_OF_JOURNEY.year);
@@ -64,7 +64,8 @@ void selectDate(){
     if(confirmation == 'Y' || confirmation == 'y'){
         //Save dates
         int days = getDifference(DATE_OF_JOURNEY,DATE_OF_RETURN);
-        if(days <= 0){
+        int isDateAlreadyGone = getDifference(getCurrentDate(), DATE_OF_JOURNEY) < 0;
+        if (days <= 0 || isDateAlreadyGone) {
             printf("Invalid Dates!\n");
             printf("Try again!\n");
             selectDate();

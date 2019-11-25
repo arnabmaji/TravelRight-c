@@ -9,7 +9,7 @@
 
 
 void selectAccommodationPackage(){
-    printf("\n------------------------------------Accommodation Selection------------------------------------\n");
+    printf("\n------------------------------------Accommodation Selection------------------------------------\n\n");
     printf("Please select your accommodation type:\n");
 
     for(int i=0;i<3;i++){

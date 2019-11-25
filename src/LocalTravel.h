@@ -8,7 +8,7 @@
 #endif //TRAVELRIGHT_LOCALTRAVEL_H
 
 void displayLocalTravelOptions(){
-    printf("\n-----------------------------------------Local Travel-----------------------------------------\n");
+    printf("\n-----------------------------------------Local Travel-----------------------------------------\n\n");
     printf("Do you want to opt for Local Travel for transportation or sight seeing?\n");
     printf("Press 'Y' to proceed or 'N' to cancel:\n");
     char confirmation;
